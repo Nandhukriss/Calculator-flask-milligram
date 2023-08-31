@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLASK CALCULATOR</title>
+    <!-- <link rel="stylesheet" href="{{url_for('static',filename='styles.css')}}"> -->
+    <link rel="stylesheet" href="css/normalize.css" />
+
+    <link rel="stylesheet" href="../static/styles.css">
+</span><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"><span class="pln">
+</head>
+
+<body>
+        <div class="header">
+            <h1>Flask Calculator</h1>
+        </div>
+    
+            <form action="calculate" method="post">
+            
+                <label for="number2">First Number</label>
+                <input type="number" name="number1" value="0">
+                
+                <label for="operations">Select Operations</label>
+                    <select name="operations" id="operations" >
+                        <option value="+">+</option>
+                        <option value="*">*</option>
+                        <option value="/">/</option>
+                        <option value="-">-</option>
+                    </select>
+             
+                
+                    <label for="number2">Second Number</label>
+                    <input type="number" name="number2" value="0"><br><br></div>
+                <button type="submit" class="button button-default">Calculate</button>
+            </form>
+
+                <label for="result" id ="result">Result</label>
+                <input type="number"  id =" result" name="number1" value="{{result}}">
+
+        {% if error_msg %}
+        <p class="error">{{ error_msg }}</p>
+        {% endif %}
+        
+    
+</body>
+</html>
